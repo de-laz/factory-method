@@ -11,7 +11,7 @@ namespace FactoryMethod
 		/// <typeparam name="TSource">The type of object from which an instance of TDestiation is to be created.</typeparam>
 		/// <typeparam name="TDestination">The type of object to be created.</typeparam>
 		/// <param name="source"></param>
-		/// <exception cref="AssemblyNotFoundException">When the assembly to be scanne is not found.</exception>
+		/// <exception cref="CreatorNotFoundException">When no suitable creator is found.</exception>
 		/// <returns>An instance of type TDestination</returns>
         TDestination Create<TSource, TDestination>(TSource source)
             where TSource : class

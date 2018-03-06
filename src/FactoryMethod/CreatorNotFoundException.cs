@@ -5,6 +5,9 @@ namespace FactoryMethod
 {
     using System;
 
-    public class AssemblyNotFoundException : Exception
-    {}
+    public class CreatorNotFoundException : Exception
+    {
+        public CreatorNotFoundException(string message)
+            : base(message) {}
+    }
 }

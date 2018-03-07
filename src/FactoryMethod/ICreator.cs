@@ -3,10 +3,10 @@
 
 namespace FactoryMethod
 {
-    public interface ICreator<in TSource, out TDestination>
-        where TSource : class
-        where TDestination : class
-    {
-        TDestination Create(TSource source);
-    }
+	public interface ICreator<in TSource, out TDestination>
+		where TSource : class
+		where TDestination : class
+	{
+		TDestination Create(TSource source);
+	}
 }

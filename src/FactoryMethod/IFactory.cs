@@ -3,9 +3,9 @@
 
 namespace FactoryMethod
 {
-    public interface IFactory
-    {
-        /// <summary>
+	public interface IFactory
+	{
+		/// <summary>
 		/// Creates an instance of type TDestination from an instance of type TSource. 
 		/// </summary>
 		/// <typeparam name="TSource">The type of object from which an instance of TDestiation is to be created.</typeparam>
@@ -13,8 +13,8 @@ namespace FactoryMethod
 		/// <param name="source"></param>
 		/// <exception cref="CreatorNotFoundException">When no suitable creator is found.</exception>
 		/// <returns>An instance of type TDestination</returns>
-        TDestination Create<TSource, TDestination>(TSource source)
-            where TSource : class
-            where TDestination : class;
-    }
+		TDestination Create<TSource, TDestination>(TSource source)
+			where TSource : class
+			where TDestination : class;
+	}
 }

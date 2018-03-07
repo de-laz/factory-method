@@ -3,11 +3,11 @@
 
 namespace FactoryMethod
 {
-    using System;
+	using System;
 
-    public class CreatorNotFoundException : Exception
-    {
-        public CreatorNotFoundException(string message)
-            : base(message) {}
-    }
+	public class CreatorNotFoundException : Exception
+	{
+		public CreatorNotFoundException(string message)
+			: base(message) { }
+	}
 }

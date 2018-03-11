@@ -3,7 +3,7 @@ root = true
 
 # Don't use tabs for indentation.
 [*]
-indent_style = space
+indent_style = tab
 # (Please don't specify an indent_size here; that has too many unintended consequences.)
 
 # Code files
@@ -28,8 +28,8 @@ indent_size = 2
 dotnet_sort_system_directives_first = true
 
 # Don't use this. qualifier
-dotnet_style_qualification_for_field = false:suggestion
-dotnet_style_qualification_for_property = false:suggestion
+dotnet_style_qualification_for_field = false:warning
+dotnet_style_qualification_for_property = false:warning
 
 # use int x = .. over Int32
 dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
@@ -47,8 +47,19 @@ csharp_style_throw_expression = false:suggestion
 
 # Newline settings
 csharp_new_line_before_open_brace = all
-csharp_new_line_before_else = true
-csharp_new_line_before_catch = true
-csharp_new_line_before_finally = true
+csharp_new_line_before_else = false:warning
+csharp_new_line_before_catch = false:warning
+csharp_new_line_before_finally = false:warning
 csharp_new_line_before_members_in_object_initializers = true
 csharp_new_line_before_members_in_anonymous_types = true
+
+# Naming settings
+dotnet_naming_rule.public_members_must_be_capitalized.sysmbols = public_symbols
+dotnet_naming_symbols.public_symbols.applicable_kinds           = property,method,field,event,delegate
+dotnet_naming_symbols.public_symbols.applicable_accessibilities = public
+dotnet_naming_symbols.public_symbols.required_modifiers         = readonly
+
+dotnet_naming_rule.public_members_must_be_capitalized.style    = first_word_upper_case_style
+dotnet_naming_style.first_word_upper_case_style.capitalization = first_word_upper
+
+dotnet_naming_rule.public_members_must_be_capitalized.severity = suggestion
